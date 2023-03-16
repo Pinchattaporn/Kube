@@ -90,6 +90,46 @@ Ref.
 - ค้นหา Install minikube หรือกดที่ Link : https://minikube.sigs.k8s.io/docs/start/
 <center><img src="images/install mini.png" alt="center"></center>
 
+**2.2 ติดตั้งตามเว็บไซต์**
+- 2.2.1) เลือก Spec ที่จะติดตั้ง
+    <center><img src="images/spec mini.png" alt="center">   </center>
 
+- 2.2.2) ดาวน์โหลดและเรียกใช้โปรแกรมติดตั้งสำหรับรุ่นล่าสุด หรือถ้าใช้ PowerShell 
+ให้ใช้คำสั่งนี้:
+    <details>
+    <summary>Show code</summary>
+
+    ```ruby
+    New-Item -Path 'c:\' -Name 'minikube' -ItemType     Directory -Force
+    Invoke-WebRequest -OutFile 'c:\minikube\minikube.exe' -Uri              'https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-  amd64.exe' -UseBasicParsing
+    ```
+
+</details>
+
+- 2.2.3) เพิ่มไบนารี minikube.exe ใน PATH ของคุณ ตรวจสอบให้แน่ใจว่าได้เรียกใช้ PowerShell ในฐานะ Administrator.
+    <details>
+    <summary>Show code</summary>
+
+    ```ruby
+    $oldPath = [Environment]::GetEnvironmentVariable('Path',    [EnvironmentVariableTarget]::Machine)
+    if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
+  [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath),   [EnvironmentVariableTarget]::Machine) `
+    }
+    ```
+    </details>
+
+
+- 2.2.4) ทดสอบการเรียกใช้งาน minikube ใน command prompt : ถ้าสามารถเรียกใช้งานได้ถือว่าจบขั้นตอน
+    * ผลลัพธ์ที่ได้
+    <center><img src="images/test.png" alt="center"></center>
+
+**2.3 Container or virtual machine manager**
+
+    minikube จำเป็นต้องอาศัยตัวจัดการไม่ว่าจะเป็น Container หรือ Vm
+
+- 2.3.1) **Hyper-V**
+
+    Ref.
+    https://minikube.sigs.k8s.io/docs/drivers/hyperv/
 
 ยังไม่เสร็จค่ะ

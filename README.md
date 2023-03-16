@@ -127,9 +127,26 @@ Ref.
 
     minikube จำเป็นต้องอาศัยตัวจัดการไม่ว่าจะเป็น Container หรือ Vm
 
-- 2.3.1) **Hyper-V**
+- 2.3.1) **Docker**
 
+    โดยเครื่องของฉัตรพร จะใช้ Docker แทนเพราะไม่มี H-per V
+    
     Ref.
-    https://minikube.sigs.k8s.io/docs/drivers/hyperv/
+    https://minikube.sigs.k8s.io/docs/drivers/docker/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ยังไม่เสร็จค่ะ

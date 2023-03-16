@@ -20,7 +20,7 @@ Ref.
 **1.1 Install kubectl**
 - ค้นหา Install kubectl 
 หรือกดที่ Link : https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
-<center><img src="images/install Kubectl.png" alt="center"></center>
+    <center><img src="images/install Kubectl.png" alt="center"></center>
 
 **1.2 Copy คำสั่งต่างๆตามขั้นตอน**
 * 1.2.1ดาวโหลดรุ่นล่าสุด version1.26.0 
@@ -45,24 +45,24 @@ Ref.
 
 **1.3 การใช้ command promt**
 - 1.3.1) สร้างโฟลเดอร์ชื่อ kubectl
-<center><img src="images/create-fol.png" alt="center"></center>
+    <center><img src="images/create-fol.png" alt="center"></center>
 
 - 1.3.2) รันคำสั่งในข้อที่ 1.2.1
-<center><img src="images/run1.png" alt="center"></center>
+    <center><img src="images/run1.png" alt="center"></center>
 
 - 1.3.3) ปรับ Environment 
     *  Search "Edit the system environment varibles"
-<center><img src="images/envi.png" alt="center"></center>
+    <center><img src="images/envi.png" alt="center"></center>
 
 * กด Environment Variables
-<center><img src="images/envi2.png" alt="center"></center>
+    <center><img src="images/envi2.png" alt="center"></center>
     
 * เลือก Path
-<center><img src="images/envi3.png" alt="center"></center>
+    <center><img src="images/envi3.png" alt="center"></center>
     
 * กด New และเพิ่ม Path "C:\kubectl" เสร็จแล้วกด ok
 
-<center><img src="images/envi4.png" alt="center"></center>
+    <center><img src="images/envi4.png" alt="center"></center>
 
 - 1.3.4) ทดสอบเพื่อให้แน่ใจว่าเวอร์ชันของ kubectl เหมือนกับที่ดาวน์โหลดมา
 โดยรันคำสั่ง
@@ -83,12 +83,12 @@ Ref.
     ```
     </details>
     ผลลัพธ์การรัน
-<center><img src="images/run.output.png" alt="center"></center>
+    <center><img src="images/run.output.png" alt="center"></center>
 
 # 2.ติดตั้ง minikube
 **2.1 Install minikube**
 - ค้นหา Install minikube หรือกดที่ Link : https://minikube.sigs.k8s.io/docs/start/
-<center><img src="images/install mini.png" alt="center"></center>
+    <center><img src="images/install mini.png" alt="center"></center>
 
 **2.2 ติดตั้งตามเว็บไซต์**
 - 2.2.1) เลือก Spec ที่จะติดตั้ง

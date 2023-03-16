@@ -11,12 +11,12 @@ Ref.
 - docker engine 
 
 ## หัวข้อที่ศึกษา
- - [1.ติดตั้ง kubectl](#1ติดตั้ง-kubectl)
- - [2.ติดตั้ง minikube](#2ติดตั้ง-minikube)
- - [3.Revert proxy](#3revert-proxy)
+ - [1.kubectl](#1kubectl)
+ - [2.minikube](#2minikube)
+ - [3.docker engine ](#3-docker-engine)
  
 
-# 1.ติดตั้ง kubectl
+# 1.kubectl
 **1.1 Install kubectl**
 - ค้นหา Install kubectl 
 หรือกดที่ Link : https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
@@ -85,7 +85,7 @@ Ref.
     ผลลัพธ์การรัน
     <center><img src="images/run.output.png" alt="center"></center>
 
-# 2.ติดตั้ง minikube
+# 2.minikube
 **2.1 Install minikube**
 - ค้นหา Install minikube หรือกดที่ Link : https://minikube.sigs.k8s.io/docs/start/
     <center><img src="images/install mini.png" alt="center"></center>
@@ -123,16 +123,47 @@ Ref.
     * ผลลัพธ์ที่ได้
     <center><img src="images/test.png" alt="center"></center>
 
-**2.3 Container or virtual machine manager**
+# 3. docker engine 
+**3.1 Install  Docker Desktop**
+- ค้นหา Install  Docker Desktop 
+หรือกดที่ Link :https://docs.docker.com/desktop/install/windows-install/
 
-    minikube จำเป็นต้องอาศัยตัวจัดการไม่ว่าจะเป็น Container หรือ Vm
+**3.2 เลือกตัวจำลองในการเอา minikube ไปรัน**
 
-- 2.3.1) **Docker**
+- 3.2.1) **Docker**
 
-    โดยเครื่องของฉัตรพร จะใช้ Docker แทนเพราะไม่มี H-per V
+    Ref.  https://minikube.sigs.k8s.io/docs/drivers/docker/
+
+- run คำสั่งใน command promt
+    * เริ่ม cluster โดยการใช้ docker driver
+    ใช้คำสั่ง:
+        <details>
+        <summary>Show code</summary>
+
+        ```ruby
+        minikube start --driver=docker
+        ```
+    </details>
+
+    <center><img src="images/run Doc.png" alt="center"></center>
+
+    * set ให้ Docker เป็นค่า Default
+        <details>
+        <summary>Show code</summary>
+
+        ```ruby
+        minikube config set driver docker
+        ```
+</details>
+
+- หลังรันเสร็จเช็ค images และ Containers
+    * Images
+    <center><img src="images/images After.png" alt="center"></center>
     
-    Ref.
-    https://minikube.sigs.k8s.io/docs/drivers/docker/
+    * Containers
+    <center><img src="images/Con-After.png" alt="center"></center>
+
+
 
 
 

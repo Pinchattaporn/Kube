@@ -17,7 +17,7 @@ Ref.
 <center><img src="images/install Kubectl.png" alt="center"></center>
 
 **1.2 Copy คำสั่งต่างๆตามขั้นตอน**
-* 1.2.1ดาวโหลดรุ่นล่าสุด version1.26.0**
+* 1.2.1ดาวโหลดรุ่นล่าสุด version1.26.0 
 โดยใช้คำสั่ง :
     <details>
     <summary>Show code</summary>

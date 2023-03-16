@@ -172,11 +172,21 @@ Ref.
         kubectl get pod -A
         ```
     </details>
-    
     *ผลลัพธ์: จะเห็นได้ว่ามีหลาย nodes ที่ถูกสร้าง*
-        
-    <center><img src="images/pod.png" alt="center"></center>
+        <center><img src="images/pod.png" alt="center"></center>
+    
+    * จำลองในแลปที่เล็กที่สุดของ cluster ซึ่ง node ทั้งหมดที่สร้างจะถูกรวมไว้ใน minikube เหลือเพียง node เดียว
+    
+        ใช้คำสั่ง:
+        <details>
+            <summary>Show code</summary>
 
+         ```ruby
+            kubectl get nodes
+        ```
+        </details>
+        ผลลัพธ์
+         <center><img src="images/get nodes.png" alt="center"></center>
  
 
 

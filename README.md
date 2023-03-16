@@ -156,13 +156,28 @@ Ref.
         ```
 </details>
 
-- หลังรันเสร็จเช็ค images และ Containers
+- หลังรันเสร็จเช็ค images และ Containers ที่ Docker Desktop
     * Images
     <center><img src="images/images After.png" alt="center"></center>
     
     * Containers
     <center><img src="images/Con-After.png" alt="center"></center>
 
+    * ดู pod ที่ถูกสร้าง 
+    ใช้คำสั่ง :
+        <details>
+        <summary>Show code</summary>
+
+        ```ruby
+        kubectl get pod -A
+        ```
+    </details>
+    
+    *ผลลัพธ์: จะเห็นได้ว่ามีหลาย nodes ที่ถูกสร้าง*
+        
+    <center><img src="images/pod.png" alt="center"></center>
+
+ 
 
 
 
@@ -179,5 +194,4 @@ Ref.
 
 
 
-
-ยังไม่เสร็จค่ะ
+ยังไม่เสร็จค่ะ 

@@ -10,6 +10,12 @@ Ref.
 - minikube : ใช้จัดการคลัสเตอร์บน Window
 - docker engine 
 
+## หัวข้อที่ศึกษา
+ - [1.ติดตั้ง kubectl](#1ติดตั้ง-kubectl)
+ - [2.ติดตั้ง minikube](#2ติดตั้ง-minikube)
+ - [3.Revert proxy](#3revert-proxy)
+ 
+
 # 1.ติดตั้ง kubectl
 **1.1 Install kubectl**
 - ค้นหา Install kubectl 
@@ -78,5 +84,12 @@ Ref.
     </details>
     ผลลัพธ์การรัน
 <center><img src="images/run.output.png" alt="center"></center>
+
+# 2.ติดตั้ง minikube
+**2.1 Install minikube**
+- ค้นหา Install minikube หรือกดที่ Link : https://minikube.sigs.k8s.io/docs/start/
+<center><img src="images/install mini.png" alt="center"></center>
+
+
 
 ยังไม่เสร็จค่ะ

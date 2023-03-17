@@ -14,7 +14,8 @@ Ref.
  - [1.kubectl](#1kubectl)
  - [2.minikube](#2minikube)
  - [3.docker engine ](#3-docker-engine)
- - [4.minikube Deploy-app](#4minikube-deploy-app)
+ - [4.Example minikube Deploy-app](#4minikube-deploy-app)
+ - [5.คำสั่งต่างๆของ minikube](#4minikube-deploy-app)
 
 # 1.kubectl
 **1.1 Install kubectl**
@@ -203,7 +204,7 @@ Ref.
     <center><img src="images/minikube-dashboard.png" alt="center"></center>
 
 
-# 4.minikube Deploy-app
+# 4.Example minikube Deploy-app
        
        ทดลองตามอาจารย์-> สร้างโฟลเดอร์แยกทีหลัง
 Ref.
@@ -290,7 +291,7 @@ Ref.
     -  ผลลัพธ์ : จะเห็นได้ว่า Services balanced มีสถานะ Pending อยู่
     <center><img src="images/Pending.png" alt="center">  </center>
 
-    - แก้ไข :โดยการสร้าง tunnel
+    - แก้ไข :โดยการสร้าง tunnel เพื่อ External-Ip กับ localhost
     ใช้คำสั่ง:
         <details>
         <summary>Show code</summary>
@@ -299,13 +300,19 @@ Ref.
         minikube tunnel
         ```
     </details>
-    
-     
+    ผลลัพธ์ของการแก้ไข
+        <center><img src="images/External-ip.png" alt="center">  </center>
 
+# 5.คำสั่งต่างๆของ minikube   
 
-
-
-
+|ลำดับ | คำสั่ง |การใช้งาน |
+|:------:|:------:|:---------:|
+|1|minikube pause|------ |
+|2|minikube unpause|------ |
+|3|minikube stop|------ |
+|4|minikube config set memory 9001|------ |5|minikube addons list|------ |
+|6|minikube start -p aged --kubernetes-version=v1.16.1|------ |
+|7|minikube delete --all|ลบคลัสเตอร์ minikube ทั้งหมด|
 
 
 

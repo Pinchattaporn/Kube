@@ -14,7 +14,7 @@ Ref.
  - [1.kubectl](#1kubectl)
  - [2.minikube](#2minikube)
  - [3.docker engine ](#3-docker-engine)
- 
+ - [4.minikube Deploy-app](#4minikube-deploy-app)
 
 # 1.kubectl
 **1.1 Install kubectl**
@@ -187,12 +187,120 @@ Ref.
         </details>
         ผลลัพธ์
          <center><img src="images/get nodes.png" alt="center"></center>
+
+**3.3 ทดลองเปิด minikube dashboard**
+* รันคำสั่งเพื่อ Dashboard minikube
+
+    ใช้คำสั่ง :
+    <details>
+    <summary>Show code</summary>
+
+     ```ruby
+        minikube dashboard
+    ```
+    </details>
+* ผลลัพธ์  
+    <center><img src="images/minikube-dashboard.png" alt="center"></center>
+
+
+# 4.minikube Deploy-app
+       
+       ทดลองตามอาจารย์-> สร้างโฟลเดอร์แยกทีหลัง
+Ref.
+- https://minikube.sigs.k8s.io/docs/start/
+
+**4.1 Deploy applications service**
+* ใช้คำสั่ง :
+    <details>
+    <summary>Show code</summary>
+    
+    ```ruby
+    kubectl create deployment hello-minikube --image=kicbase/echo-server:1.0
+    kubectl expose deployment hello-minikube --type=NodePort --port=8080
+    ```
+  </details>
+     ผลลัพธ์ : 
+     - ทำการสร้าง Containers ที่ชื่อว่า hello-minikube 
+     - ทำการสร้าง service ที่เป็นชนิดของ NodePort
+    <center><img src="images/deploy-create images.png" alt="center"></center>
+
+* เช็ค minikube dashboard จะมีข้อมูลต่างๆขึ้น
+    <center><img src="images/dashboard-After.png" alt="center"></center>
+
+* ทดสอบการเชื่อมต่อ ว่ามี service ที่เราสร้าง run อยู่มั้ย
+    * ใช้คำสั่ง :
+        <details>
+        <summary>Show code</summary>
+    
+        ```ruby
+        kubectl get services hello- minikube
+
+        ```
+    </details>
+    ผลลัพธ์
+    <center><img src="images/test-connec.png" alt="center"></center>
+
+* ทำการ Forward Port
+    * ใช้คำสั่ง :
+        <details>
+        <summary>Show code</summary>
+    
+        ```ruby
+       kubectl port-forward service/hello-  minikube 7080:8080
+
+
+        ```
+    </details>
+        ผลลัพธ์
+    <center><img src="images/forward port.png" alt="center"></center>
+
+**4.1 Deploy applications LoadBalancer**
+ - ทำเพิ่มเติม
  
+    Ref.: https://minikube.sigs.k8s.io/docs/start/ 
 
+ * Deploy application -> LoadBalancer 
+    - ปรับใช้ LoadBalancer
+    ใช้คำสั่ง :
+        <details>
+        <summary>Show code</summary>
 
+        ```ruby
+       kubectl create deployment balanced --image=kicbase/echo-server:1.0
+        kubectl expose deployment balanced --type=LoadBalancer --port=8080
+        ```
+    </details>
+            ผลลัพธ์
+    
+    <center><img src="images/LaLoadBalancer.png" alt="center">  </center>
 
+* เช็ค minikube dashboard : 
+     <center><img src="images/check-das.png" alt="center">  </center>
 
+* ตรวจสอบ service 
+  ใช้คำสั่ง :
+  <details>
+    <summary>Show code</summary>
+    
+    ```ruby
+       kubectl get services balanced
+    ```
+    </details>
+   
+    -  ผลลัพธ์ : จะเห็นได้ว่า Services balanced มีสถานะ Pending อยู่
+    <center><img src="images/Pending.png" alt="center">  </center>
 
+    - แก้ไข :โดยการสร้าง tunnel
+    ใช้คำสั่ง:
+        <details>
+        <summary>Show code</summary>
+    
+        ```ruby
+        minikube tunnel
+        ```
+    </details>
+    
+     
 
 
 

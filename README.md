@@ -272,7 +272,7 @@
     
 <center><img src="images/pod.png" alt="center">  </center>
     
-    </details>
+</details>
       
 
   - จำลองในแลปที่เล็กที่สุดของ cluster ซึ่ง node ทั้งหมดที่สร้างจะถูกรวมไว้ใน minikube เหลือเพียง node เดียว
@@ -285,7 +285,7 @@
        kubectl get nodes
     ```
 
-      </details>
+    </details>
       ผลลัพธ์
        <details>
     <summary>Show Images</summary>
@@ -334,7 +334,7 @@ Ref.
      ผลลัพธ์ : 
      - ทำการสร้าง Containers ที่ชื่อว่า hello-minikube 
      - ทำการสร้าง service ที่เป็นชนิดของ NodePort
-     <details>
+    <details>
     <summary>Show Images</summary>
     
     <center><img src="images/deploy-create images.png" alt="center">  </center>
@@ -343,7 +343,8 @@ Ref.
     
 
 - เช็ค minikube dashboard จะมีข้อมูลต่างๆขึ้น
-    <center><img src="images/dashboard-After.png" alt="center"></center>
+
+    <center><img src="images/dashboard-after.png" alt="center"></center>
 
 - ทดสอบการเชื่อมต่อ ว่ามี service ที่เราสร้าง run อยู่มั้ย
 
@@ -359,7 +360,7 @@ Ref.
     <details>
     <summary>Show Images</summary>
     
-    <center><img src="images/test-connec.png" alt="center">  </center>
+<center><img src="images/test-connec.png" alt="center">  </center>
     
 </details>
    
@@ -373,7 +374,8 @@ Ref.
     ```ruby
     kubectl port-forward service/hello- minikube 7080:8080
     ```
-</details>
+
+    </details>
     ผลลัพธ์
         <details>
         <summary>Show Images</summary>

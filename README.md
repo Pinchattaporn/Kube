@@ -227,22 +227,27 @@
   <details>
   <summary>Show code</summary>
 
-          ```ruby
-          minikube start --driver=docker
-          ```
-      </details>
+  ```ruby
+    minikube start --driver=docker
+    ```
+</details>
+    ผลลัพธ์
+    <details>
+    <summary>Show Images</summary>
+            
+<center><img src="images/run Doc.png" alt="center">  </center>
+            
+</details>
 
-      <center><img src="images/run Doc.png" alt="center"></center>
 
-      * set ให้ Docker เป็นค่า Default
-          <details>
-          <summary>Show code</summary>
+* set ให้ Docker เป็นค่า Default
+    <details>
+    <summary>Show code</summary>
 
-          ```ruby
-          minikube config set driver docker
-          ```
-
-  </details>
+    ```ruby
+    minikube config set driver docker
+    ```
+</details>
 
 - หลังรันเสร็จเช็ค images และ Containers ที่ Docker Desktop
 

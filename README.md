@@ -464,78 +464,88 @@ Ref.
 
 
 ผลลัพธ์
-<center><img src="images/treafik.png" alt="center"> </center>
+<details>
+<summary>Show Images</summary>
+    
+<center><img src="images/treafik.png" alt="center">  </center>
+    
+</details>
+
 
 - 5.1.2) ติดตั้ง RBAC สำหรับ treafik-
   ใช้คำสั่ง:
   <details>
-  <summary>Show code</summary>
-
-      ```ruby
-
-  kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
-  ```
-  </details>
-  ผลลัพธ์
-  <center><img src="images/treafik1.png" alt="center"> </center>
-
-- 5.1.3) ติดตั้ง Scoop โดย PowerShell terminal
-  ใช้คำสั่ง :
-  <details>
-  <summary>Show code</summary>
-
-      ```ruby
-
-  > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-  > irm get.scoop.sh | iex
-
-      ```
-
-  </details>
-  ผลลัพธ์
-      <center><img src="images/scop.png" alt="center">  </center>
-
-
-- 5.1.5) เช็ค scoop ว่าติดตั้งเรียบร้อยมั้ย และติดตั้ง helm
-ใช้คำสั่ง :
-<details>
     <summary>Show code</summary>
 
-```ruby
+      ```ruby
+  kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
+  ```
+</details>
+  ผลลัพธ์
+  <details>
+    <summary>Show Images</summary>
+    
+<center><img src="images/treafik1.png" alt="center">  </center>
+    
+</details>
+  
+
+- 5.1.3) ติดตั้ง Scoop โดย PowerShell terminal
+    
+    ใช้คำสั่ง :
+    <details>
+    <summary>Show code</summary>
+
+    ```ruby
+    > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    > irm get.scoop.sh | iex
+    ```
+    </details>
+  ผลลัพธ์
+    <details>
+    <summary>Show Images</summary>
+        
+    <center><img src="images/scop.png" alt="center">  </center>
+        
+    </details>
+        
+
+
+- 5.1.4) เช็ค scoop ว่าติดตั้งเรียบร้อยมั้ย และติดตั้ง helm
+ใช้คำสั่ง :
+    <details>
+    <summary>Show code</summary>
+
+    ```ruby
    > scoop #เช็ค scoop ว่าติดตั้งเรียบร้อยมั้ย
    > scoop install helm #ติดตั้ง helm
-```
+    ```
 
 </details>
 
-- 5.1.4) ติดตั้ง Traefik Helmchart
+- 5.1.5) ติดตั้ง Traefik Helmchart
+  ใช้คำสั่ง :
+    <details>
+    <summary>Show code</summary>
+
+    ```ruby
+    > helm repo add traefik https://traefik.github.io/charts
+    > helm repo update
+    > helm install traefik traefik/traefik
+    ```
+</details>
+
+- 5.1.6) ตรวจสอบ service ว่า run อยู่มั้ย
   ใช้คำสั่ง :
   <details>
   <summary>Show code</summary>
 
-      ```ruby
+    ```ruby
+    > kubectl get svc -l app.kubernetes.io/name=traefik
+    > kubectl get po -l app.kubernetes.io/name=traefik
+    ```
 
-  > helm repo add traefik https://traefik.github.io/charts
-  > helm repo update
-  > helm install traefik traefik/traefik
-
-      ```
-
-  </details>
-
-- 5.1.5) ตรวจสอบ service ว่า run อยู่มั้ย
-  ใช้คำสั่ง :
-  <details>
-  <summary>Show code</summary>
-
-      ```ruby
-
-  > kubectl get svc -l app.kubernetes.io/name=traefik
-  > kubectl get po -l app.kubernetes.io/name=traefik
-
-      ```
-
-  </details>
+</details>
 
 ผลลัพธ์ : จะเห็นได้ว่า Services traefik มีสถานะ Pending อยู่
 <center><img src="images/se-1.png" alt="center"> </center>
@@ -553,7 +563,7 @@ Ref.
     ผลลัพธ์ของการแก้ไข
         <center><img src="images/External-ip.png" alt="center">  </center>
 
-- 5.1.6) แก้ไขไฟล์ host เพื่อเพิ่ม ip สำหรับเข้าถึง treafik
+- 5.1.7) แก้ไขไฟล์ host เพื่อเพิ่ม ip สำหรับเข้าถึง treafik
   - โดยเปิด C:\Windows\System32\drivers\etc
     
         เพิ่มip : 127.0.0.1 traefik.spcn07.local
@@ -564,7 +574,7 @@ Ref.
     
     </details>
      
-- 5.1.7) รันคำสั่ง How to create secrete
+- 5.1.8) รันคำสั่ง How to create secrete
   Ref.https://github.com/iamapinan/kubeplay-traefik
 
   - ติดตั้ง apache2-utils
@@ -589,7 +599,7 @@ Ref.
 </details>
 
 
-- 5.1.8) แก้ไขไฟล์ traefik-dashboard
+- 5.1.9) แก้ไขไฟล์ traefik-dashboard
 
   Ref.https://github.com/iamapinan/kubeplay-traefik
 
@@ -627,7 +637,7 @@ Ref.
     </details>
   
 
-- 5.1.9) เช็ค Url.traefik dashboard
+- 5.1.10) เช็ค Url.traefik dashboard
 
   LinK : https://traefik.spcn07.local/dashboard/#/
 

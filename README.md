@@ -262,11 +262,10 @@
     <details>
     <summary>Show code</summary>
 
-        ```ruby
-        kubectl get pod -A
-        ```
-
-    </details>
+    ```ruby
+    kubectl get pod -A
+    ```
+</details>
     ผลลัพธ์: จะเห็นได้ว่ามีหลาย nodes ที่ถูกสร้าง
      <details>
     <summary>Show Images</summary>

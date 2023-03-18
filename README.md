@@ -126,9 +126,9 @@
   <details>
   <summary>Show code</summary>
 
-      ```ruby
+    ```ruby
       kubectl version --client
-      ```
+    ```
 
   </details>
 

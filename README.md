@@ -270,7 +270,7 @@
      <details>
     <summary>Show Images</summary>
     
-    <center><img src="images/pod.png" alt="center">  </center>
+<center><img src="images/pod.png" alt="center">  </center>
     
     </details>
       
@@ -351,12 +351,10 @@ Ref.
     <details>
     <summary>Show code</summary>
 
-        ```ruby
-        kubectl get services hello- minikube
-
-        ```
-
-    </details>
+    ```ruby
+    kubectl get services hello- minikube
+    ```
+</details>
     ผลลัพธ์
     <details>
     <summary>Show Images</summary>
@@ -372,13 +370,10 @@ Ref.
     <details>
     <summary>Show code</summary>
 
-        ```ruby
-
+    ```ruby
     kubectl port-forward service/hello- minikube 7080:8080
-
-        ```
-
-    </details>
+    ```
+</details>
     ผลลัพธ์
         <details>
         <summary>Show Images</summary>
@@ -400,8 +395,7 @@ Ref.
     <details>
     <summary>Show code</summary>
 
-        ```ruby
-
+    ```ruby
     kubectl create deployment balanced --image=kicbase/echo-server:1.0
     kubectl expose deployment balanced --type=LoadBalancer --port=8080
     ```
@@ -461,9 +455,10 @@ Ref.
   ใช้คำสั่ง:
   <details>
   <summary>Show code</summary>
-      ```ruby
-      kubectl apply -f                https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-  configuration/kubernetes-crd-definition-v1.yml
-      ```
+    
+    ```ruby
+      kubectl apply -f                  https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-  configuration/kubernetes-crd-definition-v1.yml
+    ```
   </details>
 
 
@@ -481,9 +476,9 @@ Ref.
   <details>
     <summary>Show code</summary>
 
-      ```ruby
-  kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
-  ```
+    ```ruby
+    kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
+    ```
 </details>
   ผลลัพธ์
   <details>

@@ -47,7 +47,7 @@
   <summary>Show code</summary>
 
     ```ruby
-      curl.exe -LO          "https://dl.k8s.io/release/v1.26.0/bin/windows/amd64/kubectl.exe"
+      curl.exe -LO "https://dl.k8s.io/release/v1.26.0/bin/windows/amd64/kubectl.exe"
     ```
 </details>
 

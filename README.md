@@ -457,7 +457,7 @@ Ref.
   <summary>Show code</summary>
     
     ```ruby
-      kubectl apply -f                  https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-  configuration/kubernetes-crd-definition-v1.yml
+      kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-  configuration/kubernetes-crd-definition-v1.yml
     ```
   </details>
 

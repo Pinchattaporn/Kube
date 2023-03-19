@@ -21,7 +21,7 @@
 - [1.kubectl](#1kubectl)
 - [2.minikube](#2minikube)
 - [3.docker engine ](#3-docker-engine)
-- [4.Example minikube Deploy-app](#4minikube-deploy-app)
+- [4.Example minikube Deploy-app](#4example-minikube-deploy-app)
 - [5.Traefik deploy บน miniKube](#5traefik-deploy-บน-minikube)
 - [6.web deploy ](#6web-deploy)
 
